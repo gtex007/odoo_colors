@@ -1,0 +1,98 @@
+// ============================================================
+//  xIVISION — PRIMARY VARIABLES
+//  Odoo 19 Enterprise  ·  ExcelVision Design System v1.0
+//
+//  Este ficheiro é carregado com "prepend" no bundle
+//  web._assets_primary_variables, garantindo prioridade
+//  sobre as variáveis padrão do Odoo.
+//
+//  NÃO editar os ficheiros core do Odoo.
+// ============================================================
+
+
+// ── Paleta de Identidade ExcelVision ────────────────────────
+$xiv-brand:        #0052A5;   // azul principal
+$xiv-brand-dark:   #003366;   // navy — hover, títulos
+$xiv-brand-mid:    #0077C8;   // azul médio
+$xiv-brand-cyan:   #0099CC;   // ciano — acento secundário
+
+// ── Semântica / Estado ───────────────────────────────────────
+$xiv-success:      #0B7A5C;
+$xiv-warning:      #92640A;
+$xiv-danger:       #BE3A2F;
+$xiv-info:         #0052A5;
+
+// ── Fundos ───────────────────────────────────────────────────
+$xiv-bg-base:      #EEF2F7;
+$xiv-bg-surface:   #FFFFFF;
+$xiv-bg-footer:    #0D1E35;
+
+// ── Texto ────────────────────────────────────────────────────
+$xiv-text-primary:   #0F1E33;
+$xiv-text-secondary: #2D4A6A;
+$xiv-text-muted:     #5A7898;
+
+// ── Bordas ───────────────────────────────────────────────────
+$xiv-border:       #CDD8E8;
+$xiv-border-strong:#9BAFCA;
+
+
+// ============================================================
+//  MAPEAMENTO PARA VARIÁVEIS SCSS DO ODOO 19
+//  Referência: odoo/addons/web/static/src/scss/bootstrap_overridden.scss
+//              odoo/addons/web/static/src/scss/primary_variables.scss
+// ============================================================
+
+// ── Cor primária (botões, links, navbar, highlights) ─────────
+$o-brand-primary:           $xiv-brand          !default;
+$o-brand-secondary:         $xiv-brand-mid      !default;
+
+// ── Navbar do backend ────────────────────────────────────────
+$o-navbar-color:            $xiv-brand-dark     !default;
+
+// ── Menu lateral (Enterprise) ────────────────────────────────
+$o-main-sidebar-bg:         $xiv-brand-dark     !default;
+$o-main-sidebar-text:       #FFFFFF             !default;
+
+// ── Fundo geral do backend ───────────────────────────────────
+$o-view-background-color:   $xiv-bg-base        !default;
+
+// ── Bootstrap — cor primária (herda botões, badges, etc.) ────
+$primary:                   $xiv-brand          !default;
+$secondary:                 $xiv-brand-mid      !default;
+$success:                   $xiv-success        !default;
+$info:                      $xiv-info           !default;
+$warning:                   $xiv-warning        !default;
+$danger:                    $xiv-danger         !default;
+
+// ── Links ────────────────────────────────────────────────────
+$link-color:                $xiv-brand-mid      !default;
+$link-hover-color:          $xiv-brand-dark     !default;
+
+// ── Inputs / Forms ───────────────────────────────────────────
+$input-focus-border-color:  $xiv-brand          !default;
+$input-focus-box-shadow:    0 0 0 3px rgba(0, 82, 165, 0.10) !default;
+$input-bg:                  #F8FAFD             !default;
+$input-border-color:        $xiv-border         !default;
+
+// ── Bordas gerais ────────────────────────────────────────────
+$border-color:              $xiv-border         !default;
+
+// ── Body ─────────────────────────────────────────────────────
+$body-bg:                   $xiv-bg-base        !default;
+$body-color:                $xiv-text-primary   !default;
+
+// ── Tipografia ───────────────────────────────────────────────
+//    O Odoo 19 Enterprise usa Inter por defeito — alinhado com o DS.
+//    Se precisares de forçar, descomenta:
+// $font-family-sans-serif: 'Inter', system-ui, sans-serif !default;
+
+// ── Border-radius ────────────────────────────────────────────
+$border-radius:             6px                 !default;
+$border-radius-sm:          4px                 !default;
+$border-radius-lg:          10px                !default;
+
+// ── Sombras ──────────────────────────────────────────────────
+$box-shadow-sm:   0 1px 3px rgba(0, 52, 102, 0.06) !default;
+$box-shadow:      0 2px 8px rgba(0, 52, 102, 0.08), 0 1px 3px rgba(0, 52, 102, 0.05) !default;
+$box-shadow-lg:   0 8px 32px rgba(0, 52, 102, 0.12), 0 4px 12px rgba(0, 52, 102, 0.08) !default;

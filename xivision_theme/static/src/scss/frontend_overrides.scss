@@ -1,0 +1,55 @@
+// ============================================================
+//  xIVISION — FRONTEND / PORTAL OVERRIDES
+//  Odoo 19 Enterprise  ·  ExcelVision Design System v1.0
+//
+//  Aplica as cores da ExcelVision ao portal público do Odoo
+//  (my.odoo.com/odoo/..., portal do cliente, website se activo)
+// ============================================================
+
+$xiv-brand:  #0052A5;
+$xiv-navy:   #003366;
+$xiv-cyan:   #0099CC;
+$xiv-border: #CDD8E8;
+$xiv-bg:     #EEF2F7;
+$xiv-footer: #0D1E35;
+$xiv-text:   #0F1E33;
+
+
+// ── Navbar do website/portal ─────────────────────────────────
+#wrapwrap .navbar,
+.o_portal .o_portal_navbar {
+  background-color: $xiv-navy !important;
+  border-bottom: 2px solid $xiv-cyan !important;
+
+  .navbar-brand, a.nav-link, .nav-link {
+    color: rgba(255,255,255,0.90) !important;
+    &:hover { color: #fff !important; }
+  }
+}
+
+// ── Botões primários no portal ───────────────────────────────
+#wrapwrap .btn-primary,
+.o_portal .btn-primary {
+  background-color: $xiv-brand !important;
+  border-color: $xiv-brand !important;
+  &:hover { background-color: $xiv-navy !important; border-color: $xiv-navy !important; }
+}
+
+// ── Links ────────────────────────────────────────────────────
+#wrapwrap a:not(.btn):not(.nav-link) {
+  color: $xiv-brand;
+  &:hover { color: $xiv-navy; }
+}
+
+// ── Rodapé ───────────────────────────────────────────────────
+#wrapwrap footer,
+.o_footer {
+  background-color: $xiv-footer !important;
+  border-top: 3px solid $xiv-brand !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+// ── Fundo de página ──────────────────────────────────────────
+#wrapwrap {
+  background-color: $xiv-bg !important;
+}

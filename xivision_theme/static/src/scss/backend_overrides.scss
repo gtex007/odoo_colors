@@ -1,0 +1,253 @@
+// ============================================================
+//  xIVISION — BACKEND OVERRIDES
+//  Odoo 19 Enterprise  ·  ExcelVision Design System v1.0
+//
+//  Personalizações de componentes específicos do backend
+//  Enterprise: navbar, sidebar, kanban, chatter, statusbar.
+// ============================================================
+
+// Variáveis locais (reutilizáveis neste ficheiro)
+$xiv-brand:      #0052A5;
+$xiv-navy:       #003366;
+$xiv-mid:        #0077C8;
+$xiv-cyan:       #0099CC;
+$xiv-bg:         #EEF2F7;
+$xiv-border:     #CDD8E8;
+$xiv-text:       #0F1E33;
+$xiv-text-sec:   #2D4A6A;
+$xiv-text-muted: #5A7898;
+$xiv-success:    #0B7A5C;
+$xiv-danger:     #BE3A2F;
+
+
+// ── 1. TOPBAR / NAVBAR ───────────────────────────────────────
+
+.o_main_navbar {
+  background-color: $xiv-navy !important;
+  border-bottom: 2px solid $xiv-cyan !important;
+
+  // Logo e nome da app
+  .o_menu_brand {
+    color: #fff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px;
+  }
+
+  // Ícones da topbar
+  .o_nav_entry, .o_menu_sections > li > a {
+    color: rgba(255,255,255,0.85) !important;
+    &:hover { color: #fff !important; background: rgba(255,255,255,0.08) !important; }
+  }
+
+  // Ícones de sistema (debug, apps, etc.)
+  .o_cp_action_menus .o_dropdown_toggler,
+  .o_user_menu .o_dropdown_toggler {
+    color: rgba(255,255,255,0.85) !important;
+    &:hover { color: #fff !important; }
+  }
+}
+
+
+// ── 2. MENU LATERAL (Enterprise) ─────────────────────────────
+
+.o_web_client .o_action_manager {
+  // Breadcrumb accent
+  .o_breadcrumb .o_breadcrumb_item.active {
+    color: $xiv-brand !important;
+    font-weight: 600;
+  }
+}
+
+// App Switcher — fundo e hover
+.o_home_menu {
+  background: $xiv-bg !important;
+
+  .o_app {
+    .o_app_name { color: $xiv-text !important; font-weight: 500; }
+    &:hover .o_app_icon { box-shadow: 0 4px 16px rgba(0, 82, 165, 0.20); }
+  }
+}
+
+
+// ── 3. CONTROL PANEL ─────────────────────────────────────────
+
+.o_control_panel {
+  background: #fff !important;
+  border-bottom: 1px solid $xiv-border !important;
+  box-shadow: 0 1px 3px rgba(0, 52, 102, 0.06) !important;
+
+  // Botão "Novo" (primário)
+  .o_control_panel_actions .btn-primary {
+    background-color: $xiv-brand !important;
+    border-color: $xiv-brand !important;
+    &:hover {
+      background-color: $xiv-navy !important;
+      border-color: $xiv-navy !important;
+    }
+  }
+}
+
+
+// ── 4. STATUSBAR (topo dos formulários) ──────────────────────
+
+.o_statusbar_status {
+  .o_arrow_button.btn-primary,
+  .o_statusbar_status button.o_arrow_button[aria-checked="true"] {
+    background-color: $xiv-brand !important;
+    border-color: $xiv-brand !important;
+    color: #fff !important;
+  }
+}
+
+
+// ── 5. KANBAN ────────────────────────────────────────────────
+
+.o_kanban_view {
+  background: $xiv-bg !important;
+
+  .o_kanban_record {
+    border: 1px solid $xiv-border !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px rgba(0, 52, 102, 0.06) !important;
+    &:hover {
+      border-color: rgba(0, 82, 165, 0.30) !important;
+      box-shadow: 0 2px 8px rgba(0, 52, 102, 0.10) !important;
+    }
+  }
+
+  .o_kanban_header {
+    .o_kanban_header_title {
+      color: $xiv-text !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+
+// ── 6. LIST VIEW ─────────────────────────────────────────────
+
+.o_list_view {
+  .o_data_row:hover > td {
+    background: rgba(0, 82, 165, 0.03) !important;
+  }
+
+  thead th {
+    color: $xiv-text-muted !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.6px !important;
+    text-transform: uppercase !important;
+    border-bottom: 2px solid $xiv-border !important;
+  }
+}
+
+
+// ── 7. FORM VIEW ─────────────────────────────────────────────
+
+.o_form_view {
+  // Fundo do sheet
+  .o_form_sheet {
+    background: #fff !important;
+    border: 1px solid $xiv-border !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 52, 102, 0.08) !important;
+  }
+
+  // Separador de secções
+  .o_horizontal_separator {
+    color: $xiv-text-muted !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid $xiv-border !important;
+  }
+
+  // Labels dos campos
+  .o_field_widget label,
+  .o_wrap_label label {
+    color: $xiv-text-muted !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.4px !important;
+    text-transform: uppercase !important;
+  }
+
+  // Campos em foco
+  .o_field_widget input:focus,
+  .o_field_widget textarea:focus,
+  .o_field_widget select:focus {
+    border-color: $xiv-brand !important;
+    box-shadow: 0 0 0 3px rgba(0, 82, 165, 0.10) !important;
+  }
+}
+
+
+// ── 8. CHATTER ───────────────────────────────────────────────
+
+.o_mail_thread {
+  .o_mail_message {
+    border: 1px solid $xiv-border !important;
+    border-radius: 8px !important;
+    &:hover { border-color: rgba(0, 82, 165, 0.20) !important; }
+  }
+
+  // Botão "Enviar"
+  .o_mail_send {
+    background: $xiv-brand !important;
+    border-color: $xiv-brand !important;
+    &:hover { background: $xiv-navy !important; }
+  }
+}
+
+
+// ── 9. BOTÕES GLOBAIS ────────────────────────────────────────
+
+.btn-primary {
+  background-color: $xiv-brand !important;
+  border-color: $xiv-brand !important;
+  &:hover, &:focus {
+    background-color: $xiv-navy !important;
+    border-color: $xiv-navy !important;
+    box-shadow: 0 4px 12px rgba(0, 82, 165, 0.25) !important;
+  }
+}
+
+.btn-secondary {
+  border-color: $xiv-border !important;
+  color: $xiv-text-sec !important;
+  &:hover {
+    border-color: $xiv-brand !important;
+    color: $xiv-brand !important;
+    background: rgba(0, 82, 165, 0.05) !important;
+  }
+}
+
+
+// ── 10. SCROLLBAR ────────────────────────────────────────────
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: $xiv-bg; }
+::-webkit-scrollbar-thumb { background: $xiv-border; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: $xiv-brand; }
+
+
+// ── 11. BADGE / TAG ──────────────────────────────────────────
+
+.badge.bg-primary,
+.o_tag.o_tag_color_0 {
+  background-color: $xiv-brand !important;
+  color: #fff !important;
+}
+
+
+// ── 12. GRADIENTE DE ACENTO (divider brand) ──────────────────
+
+.o_form_sheet_bg::before,
+.xiv-divider-brand {
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, $xiv-brand, $xiv-cyan);
+  border: none;
+  margin: 16px 0;
+}
