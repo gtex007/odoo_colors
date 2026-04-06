@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- ExcelVision logo — dots circle, 256×256 -->
+
+  <!-- gap at top (~340° to 20°); dots from 20° to 340° clockwise -->
+
+  <!-- small dots — top-right -->
+  <circle cx="173" cy="50"  r="5"  fill="#0099CC"/>
+  <circle cx="192" cy="64"  r="7"  fill="#0077C8"/>
+  <circle cx="206" cy="83"  r="9"  fill="#0099CC"/>
+
+  <!-- medium — right side -->
+  <circle cx="215" cy="105" r="11" fill="#003366"/>
+  <circle cx="218" cy="128" r="13" fill="#0099CC"/>
+  <circle cx="215" cy="151" r="15" fill="#003366"/>
+
+  <!-- large — bottom-right -->
+  <circle cx="206" cy="173" r="17" fill="#0099CC"/>
+  <circle cx="192" cy="192" r="18" fill="#003366"/>
+  <circle cx="173" cy="206" r="19" fill="#0099CC"/>
+
+  <!-- largest — bottom -->
+  <circle cx="151" cy="215" r="20" fill="#003366"/>
+  <circle cx="128" cy="218" r="21" fill="#003366"/>
+  <circle cx="105" cy="215" r="20" fill="#0099CC"/>
+
+  <!-- large — bottom-left -->
+  <circle cx="83"  cy="206" r="19" fill="#003366"/>
+  <circle cx="64"  cy="192" r="18" fill="#0099CC"/>
+  <circle cx="50"  cy="173" r="17" fill="#003366"/>
+
+  <!-- medium — left side -->
+  <circle cx="41"  cy="151" r="15" fill="#0099CC"/>
+  <circle cx="38"  cy="128" r="13" fill="#003366"/>
+  <circle cx="41"  cy="105" r="11" fill="#0099CC"/>
+
+  <!-- small dots — top-left -->
+  <circle cx="50"  cy="83"  r="9"  fill="#003366"/>
+  <circle cx="64"  cy="64"  r="7"  fill="#0099CC"/>
+  <circle cx="83"  cy="50"  r="5"  fill="#003366"/>
+</svg>

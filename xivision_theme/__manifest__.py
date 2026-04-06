@@ -30,6 +30,7 @@
             'xivision_theme/static/src/scss/frontend_overrides.scss',
         ],
     },
+    'images': ['static/description/icon.svg'],
     'installable': True,
     'auto_install': False,
     'application': False,
