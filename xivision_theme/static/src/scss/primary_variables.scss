@@ -96,3 +96,37 @@ $border-radius-lg:          10px                !default;
 $box-shadow-sm:   0 1px 3px rgba(0, 52, 102, 0.06) !default;
 $box-shadow:      0 2px 8px rgba(0, 52, 102, 0.08), 0 1px 3px rgba(0, 52, 102, 0.05) !default;
 $box-shadow-lg:   0 8px 32px rgba(0, 52, 102, 0.12), 0 4px 12px rgba(0, 52, 102, 0.08) !default;
+
+
+// ============================================================
+//  CSS CUSTOM PROPERTIES -- Odoo 17+/19 usa variaveis CSS
+//  nativas em runtime. SCSS vars sozinhas nao chegam.
+// ============================================================
+
+:root {
+  // Bootstrap 5 -- cor primaria
+  --bs-primary:                #0052A5;
+  --bs-primary-rgb:            0, 82, 165;
+  --bs-link-color:             #0077C8;
+  --bs-link-hover-color:       #003366;
+
+  // Odoo -- brand
+  --o-brand-primary:           #0052A5;
+  --o-brand-secondary:         #0077C8;
+
+  // Odoo 17+/19 -- navbar / topbar
+  --o-navbar-background:       #003366;
+  --o-navbar-color:            #003366;
+
+  // Odoo 19 -- sidebar Enterprise
+  --o-sidebar-background:      #003366;
+  --o-sidebar-color:           #FFFFFF;
+
+  // Fundo geral
+  --o-view-background-color:   #EEF2F7;
+
+  // Borders / body
+  --bs-border-color:           #CDD8E8;
+  --bs-body-bg:                #EEF2F7;
+  --bs-body-color:             #0F1E33;
+}

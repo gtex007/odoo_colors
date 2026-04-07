@@ -251,3 +251,70 @@ $xiv-danger:     #BE3A2F;
   border: none;
   margin: 16px 0;
 }
+
+
+// ============================================================
+//  ODOO 19 -- seletores adicionais / atualizados
+// ============================================================
+
+$xiv-brand: #0052A5;
+$xiv-navy:  #003366;
+$xiv-cyan:  #0099CC;
+$xiv-bg:    #EEF2F7;
+$xiv-border:#CDD8E8;
+
+
+// -- Topbar alternativa Odoo 19 Enterprise --------------------
+.o_navbar,
+nav.o_main_navbar,
+header.o_main_navbar {
+  background-color: $xiv-navy !important;
+  border-bottom: 2px solid $xiv-cyan !important;
+}
+
+// -- Sidebar / App menu Odoo 19 Enterprise --------------------
+.o_menu_sections,
+.o_action_manager > .o_view_controller,
+aside.o_web_client_sidebar,
+.o_burger_menu_content {
+  background-color: $xiv-navy !important;
+}
+
+// -- Breadcrumb ativo -----------------------------------------
+.o_breadcrumb .o_breadcrumb_item:last-child,
+.o_breadcrumb .active {
+  color: $xiv-brand !important;
+  font-weight: 600;
+}
+
+// -- Botoes primarios (garantia adicional) --------------------
+button.btn-primary,
+a.btn-primary,
+.btn.btn-primary {
+  background-color: $xiv-brand !important;
+  border-color: $xiv-brand !important;
+  color: #fff !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $xiv-navy !important;
+    border-color: $xiv-navy !important;
+  }
+}
+
+// -- Selecao de linha na list view ----------------------------
+.o_list_view .o_data_row.o_selected_row > td,
+.o_list_view tr.o_selected_row > td {
+  background: rgba(0, 82, 165, 0.06) !important;
+}
+
+// -- Focus dos inputs (garantia adicional) --------------------
+input:focus,
+textarea:focus,
+select:focus,
+.o_input:focus {
+  border-color: $xiv-brand !important;
+  box-shadow: 0 0 0 3px rgba(0, 82, 165, 0.10) !important;
+  outline: none !important;
+}
