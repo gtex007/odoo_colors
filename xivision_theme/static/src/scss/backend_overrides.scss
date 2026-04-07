@@ -251,3 +251,146 @@ $xiv-danger:     #BE3A2F;
   border: none;
   margin: 16px 0;
 }
+
+
+// ============================================================
+//  DARK MODE -- Odoo 19
+//  Suporta tanto a classe HTML do Odoo como prefers-color-scheme
+// ============================================================
+
+$xiv-dark-bg:        #0D1E35;
+$xiv-dark-surface:   #112240;
+$xiv-dark-surface2:  #162B4D;
+$xiv-dark-border:    #1E3A5F;
+$xiv-dark-text:      #E8EFF7;
+$xiv-dark-text-sec:  #A8BFDA;
+$xiv-dark-text-muted:#6A8FAF;
+$xiv-brand:          #0052A5;
+$xiv-brand-mid:      #0077C8;
+$xiv-cyan:           #0099CC;
+
+@mixin xiv-dark {
+  // Fundo geral
+  --bs-body-bg:              #{$xiv-dark-bg};
+  --bs-body-color:           #{$xiv-dark-text};
+  --o-view-background-color: #{$xiv-dark-bg};
+
+  // Bordas
+  --bs-border-color:         #{$xiv-dark-border};
+
+  // Links
+  --bs-link-color:           #{$xiv-brand-mid};
+  --bs-link-hover-color:     #{$xiv-cyan};
+
+  // Navbar mantem navy (fica bem em dark)
+  --o-navbar-background:     #001F3F;
+  --o-navbar-color:          #001F3F;
+
+  // Sidebar
+  --o-sidebar-background:    #001F3F;
+  --o-sidebar-color:         #FFFFFF;
+
+  // Surfaces (cards, forms, kanban)
+  .o_form_sheet,
+  .o_kanban_record,
+  .o_control_panel {
+    background: $xiv-dark-surface !important;
+    border-color: $xiv-dark-border !important;
+    color: $xiv-dark-text !important;
+  }
+
+  // List view
+  .o_list_view {
+    background: $xiv-dark-surface !important;
+    color: $xiv-dark-text !important;
+
+    thead th {
+      color: $xiv-dark-text-muted !important;
+      border-bottom-color: $xiv-dark-border !important;
+    }
+
+    .o_data_row:hover > td {
+      background: rgba(0, 82, 165, 0.12) !important;
+    }
+
+    td, th {
+      border-color: $xiv-dark-border !important;
+    }
+  }
+
+  // Kanban fundo
+  .o_kanban_view {
+    background: $xiv-dark-bg !important;
+
+    .o_kanban_record {
+      background: $xiv-dark-surface !important;
+      border-color: $xiv-dark-border !important;
+      color: $xiv-dark-text !important;
+
+      &:hover {
+        border-color: rgba(0, 119, 200, 0.50) !important;
+      }
+    }
+  }
+
+  // Inputs
+  input, textarea, select,
+  .o_input, .o_field_widget input,
+  .o_field_widget textarea {
+    background: $xiv-dark-surface2 !important;
+    color: $xiv-dark-text !important;
+    border-color: $xiv-dark-border !important;
+
+    &:focus {
+      border-color: $xiv-brand-mid !important;
+      box-shadow: 0 0 0 3px rgba(0, 119, 200, 0.20) !important;
+    }
+  }
+
+  // Labels
+  .o_field_widget label,
+  .o_wrap_label label {
+    color: $xiv-dark-text-muted !important;
+  }
+
+  // Separadores de secao
+  .o_horizontal_separator {
+    color: $xiv-dark-text-muted !important;
+    border-bottom-color: $xiv-dark-border !important;
+  }
+
+  // Chatter
+  .o_mail_thread .o_mail_message {
+    background: $xiv-dark-surface !important;
+    border-color: $xiv-dark-border !important;
+    color: $xiv-dark-text !important;
+  }
+
+  // Dropdowns / menus
+  .dropdown-menu {
+    background: $xiv-dark-surface !important;
+    border-color: $xiv-dark-border !important;
+    color: $xiv-dark-text !important;
+
+    .dropdown-item {
+      color: $xiv-dark-text !important;
+      &:hover { background: rgba(0, 82, 165, 0.15) !important; }
+    }
+  }
+
+  // Badges
+  .badge.bg-primary { background-color: $xiv-brand !important; }
+
+  // Scrollbar
+  ::-webkit-scrollbar-track { background: $xiv-dark-bg; }
+  ::-webkit-scrollbar-thumb { background: $xiv-dark-border; }
+  ::-webkit-scrollbar-thumb:hover { background: $xiv-brand-mid; }
+}
+
+// Classe aplicada pelo Odoo 19 ao <html>
+html.o_dark_mode { @include xiv-dark; }
+
+// Fallback para preferencia do sistema
+@media (prefers-color-scheme: dark) {
+  html:not(.o_light_mode) { @include xiv-dark; }
+}
